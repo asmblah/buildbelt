@@ -20,6 +20,12 @@ export default defineWorkspace([
                 enabled: true,
                 name: 'firefox',
                 provider: 'playwright',
+                headless: true,
+                instances: [
+                    {
+                        browser: 'firefox',
+                    },
+                ],
             },
         },
     },

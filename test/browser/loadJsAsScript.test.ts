@@ -15,8 +15,10 @@ describe('.loadJsAsScript(...)', () => {
     beforeEach(async () => {
         // Dynamically load Buildbelt library itself in the test runner document,
         // so that we test the actual built bundle.
+        // Note: We need to use /dist/ path as that is where the built file exists,
+        //       even though Vite warns about it.
         const bundlePath = '/dist/buildbelt.mjs';
-        ({ loadJsAsScript } = await import(bundlePath));
+        ({ loadJsAsScript } = await import(/* @vite-ignore */ bundlePath));
     });
 
     it('should execute the given script', async () => {

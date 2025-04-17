@@ -7,7 +7,7 @@
  * https://github.com/asmblah/buildbelt/raw/main/MIT-LICENSE.txt
  */
 
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
 /* global module, require */
 
 const eslint = require('@eslint/js');
